@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>טורניר הכדורגל הקהילתי - חורפיש</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts - Rubik (Modern Hebrew Font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background-color: #f3f4f6;
+    }
+    
+    /* תבנית זכוכית לסטטיסטיקות */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    /* אנימציית רקע מדורגת */
+    .hero-gradient {
+      background: linear-gradient(-45deg, #064e3b, #047857, #166534, #0f766e);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* עיצוב רשת כדורגל ברקע */
+    .hero-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+  </style>
+</head>
+<body class="text-gray-800 antialiased overflow-x-hidden">
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-gradient relative pt-12 pb-32 lg:pt-16 lg:pb-40 overflow-hidden shadow-2xl">
+    <div class="hero-pattern absolute inset-0 opacity-40"></div>
+    
+    <!-- כדורגל דקורטיבי ברקע -->
+    <svg class="absolute -bottom-20 -left-20 w-96 h-96 text-white opacity-5 transform -rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 2c1.46 0 2.82.38 4 1.03l-3.37 5.83-2.92-1.9L9 12.35l-2.07-4.2C8.36 5.86 10.1 4 12 4zm-6.2 3.63l1.83 3.7-2.6 1.7C4.38 11 4 10.05 4 9c0-1.87.97-3.5 2.45-4.47l1.35 3.1zM6.6 18.2l3.4-5.9 2.9 1.9.7-3.4 4.5.3c-.6 3.2-2.9 5.8-6.1 6.8l-1.3-3.1-4.1 3.4zM12 20c-1.46 0-2.82-.38-4-1.03l3.37-5.83 2.92 1.9L15 11.65l2.07 4.2C15.64 18.14 13.9 20 12 20zm6.2-3.63l-1.83-3.7 2.6-1.7c.65 1.05 1.03 2.3 1.03 3.4 0 1.87-.97 3.5-2.45 4.47l-1.35-3.1z"/></svg>
+
+    <div class="relative z-10 container mx-auto px-4 text-center">
+      
+      <!-- כותרות רשמיות -->
+      <div class="flex flex-col items-center justify-center space-y-2 mb-8">
+        <span class="inline-block bg-white text-green-800 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
+          מועצה מקומית חורפיש - חינוך בלתי פורמאלי
+        </span>
+        <span class="inline-block border border-white/50 text-white text-xs md:text-sm font-medium px-4 py-1.5 rounded-full backdrop-blur-sm">
+          העמותה הציבורית החדשה לקידום הספורט בחורפיש
+        </span>
+      </div>
+
+      <!-- כותרת ראשית -->
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight mb-4 drop-shadow-lg">
+        ליגת האלופות <br />
+        <span class="text-yellow-400">חורפיש 2026</span>
+      </h1>
+      <p class="text-lg md:text-xl text-green-100 max-w-2xl mx-auto font-light drop-shadow">
+        ברוכים הבאים למרכז הטורנירים הקהילתי. בחרו את שכבת הגיל שלכם והתחילו לעקוב אחר המשחקים, התוצאות והטבלאות בזמן אמת.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== STATS SECTION ==================== -->
+  <section class="container mx-auto px-4 relative z-20 -mt-16 md:-mt-20 mb-16">
+    <div class="glass-card rounded-2xl shadow-xl p-6 md:p-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-gray-200">
+        
+        <!-- נתון 1 -->
+        <div class="p-2">
+          <div class="flex justify-center mb-2">
+            <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            </div>
+          </div>
+          <h3 class="text-4xl font-black text-gray-800">180</h3>
+          <p class="text-sm font-bold text-gray-500 uppercase tracking-wide mt-1">שחקנים משתתפים</p>
+        </div>
+
+        <!-- נתון 2 -->
+        <div class="p-2 pt-6 md:pt-2">
+          <div class="flex justify-center mb-2">
+            <div class="bg-green-100 text-green-600 p-3 rounded-full">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            </div>
+          </div>
+          <h3 class="text-4xl font-black text-gray-800">8</h3>
+          <p class="text-sm font-bold text-gray-500 uppercase tracking-wide mt-1">שכבות גיל</p>
+        </div>
+
+        <!-- נתון 3 -->
+        <div class="p-2 pt-6 md:pt-2">
+          <div class="flex justify-center mb-2">
+            <div class="bg-yellow-100 text-yellow-600 p-3 rounded-full">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+          </div>
+          <h3 class="text-4xl font-black text-gray-800">92</h3>
+          <p class="text-sm font-bold text-gray-500 uppercase tracking-wide mt-1">משחקים בטורניר</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CATEGORIES (LINKS) SECTION ==================== -->
+  <section class="container mx-auto px-4 pb-20">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-black text-gray-800 inline-block relative">
+        בחרו את שכבת הגיל שלכם
+        <div class="absolute w-1/2 h-1 bg-green-500 bottom-0 right-1/4 rounded-full mt-2 transform translate-y-3"></div>
+      </h2>
+    </div>
+
+    <!-- Grid הקישורים -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- קטגוריה 1 -->
+      <a href="#" class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100 overflow-hidden">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-green-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:scale-150 duration-500 ease-in-out"></div>
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-green-100 text-green-600 rounded-full flex justify-center items-center mb-4 shadow-sm group-hover:bg-green-600 group-hover:text-white transition duration-300">
+            <span class="text-2xl font-black">א-ב</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">שכבה א', ב'</h3>
+          <p class="text-sm text-gray-500">לחצו למעבר לטבלאות</p>
+        </div>
+      </a>
+
+      <!-- קטגוריה 2 -->
+      <a href="#" class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100 overflow-hidden">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-green-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:scale-150 duration-500 ease-in-out"></div>
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-green-100 text-green-600 rounded-full flex justify-center items-center mb-4 shadow-sm group-hover:bg-green-600 group-hover:text-white transition duration-300">
+            <span class="text-2xl font-black">ג</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">שכבה ג'</h3>
+          <p class="text-sm text-gray-500">לחצו למעבר לטבלאות</p>
+        </div>
+      </a>
+
+      <!-- קטגוריה 3 -->
+      <a href="#" class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100 overflow-hidden">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-green-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:scale-150 duration-500 ease-in-out"></div>
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-green-100 text-green-600 rounded-full flex justify-center items-center mb-4 shadow-sm group-hover:bg-green-600 group-hover:text-white transition duration-300">
+            <span class="text-2xl font-black">ד</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">שכבה ד'</h3>
+          <p class="text-sm text-gray-500">לחצו למעבר לטבלאות</p>
+        </div>
+      </a>
+
+      <!-- קטגוריה 4 -->
+      <a href="#" class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100 overflow-hidden">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-green-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:scale-150 duration-500 ease-in-out"></div>
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-green-100 text-green-600 rounded-full flex justify-center items-center mb-4 shadow-sm group-hover:bg-green-600 group-hover:text-white transition duration-300">
+            <span class="text-2xl font-black">ה</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">שכבה ה'</h3>
+          <p class="text-sm text-gray-500">לחצו למעבר לטבלאות</p>
+        </div>
+      </a>
+
+      <!-- קטגוריה 5 -->
+      <a href="#" class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100 overflow-hidden">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-green-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:scale-150 duration-500 ease-in-out"></div>
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-green-100 text-green-600 rounded-full flex justify-center items-center mb-4 shadow-sm group-hover:bg-green-600 group-hover:text-white transition duration-300">
+            <span class="text-2xl font-black">ו</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">שכבה ו'</h3>
+          <p class="text-sm text-gray-500">לחצו למעבר לטבלאות</p>
+        </div>
+      </a>
+
+      <!-- קטגוריה 6 -->
+      <a href="#" class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100 overflow-hidden">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-green-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:scale-150 duration-500 ease-in-out"></div>
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-green-100 text-green-600 rounded-full flex justify-center items-center mb-4 shadow-sm group-hover:bg-green-600 group-hover:text-white transition duration-300">
+            <span class="text-2xl font-black">ז-ח</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">שכבות ז', ח'</h3>
+          <p class="text-sm text-gray-500">לחצו למעבר לטבלאות</p>
+        </div>
+      </a>
+
+      <!-- קטגוריה 7 -->
+      <a href="#" class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-100 overflow-hidden">
+        <div class="absolute top-0 right-0 w-20 h-20 bg-green-50 rounded-bl-full -mr-4 -mt-4 transition group-hover:scale-150 duration-500 ease-in-out"></div>
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-white border border-green-100 text-green-600 rounded-full flex justify-center items-center mb-4 shadow-sm group-hover:bg-green-600 group-hover:text-white transition duration-300">
+            <span class="text-2xl font-black">ט-י</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-1">שכבות ט', י'</h3>
+          <p class="text-sm text-gray-500">לחצו למעבר לטבלאות</p>
+        </div>
+      </a>
+
+      <!-- קטגוריה 8 - בוגרים (עיצוב מיוחד) -->
+      <a href="#" class="group relative bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300 border border-gray-700 overflow-hidden">
+        <div class="absolute top-0 right-0 w-24 h-24 bg-yellow-500/20 rounded-bl-full -mr-4 -mt-4 transition group-hover:scale-150 duration-500 ease-in-out"></div>
+        <div class="relative z-10 flex flex-col items-center text-center">
+          <div class="w-16 h-16 bg-gray-800 border-2 border-yellow-500 text-yellow-400 rounded-full flex justify-center items-center mb-4 shadow-lg group-hover:bg-yellow-500 group-hover:text-gray-900 transition duration-300">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">ליגת בוגרים</h3>
+          <p class="text-sm text-yellow-500 font-medium">מעל גיל 18</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-white border-t border-gray-200 mt-10">
+    <div class="container mx-auto px-4 py-8 flex flex-col items-center text-center">
+      <div class="text-2xl mb-2 text-green-700">⚽</div>
+      <p class="text-gray-500 font-medium text-sm">
+        טורניר הכדורגל הקהילתי של חורפיש
+      </p>
+      <p class="text-gray-400 text-xs mt-2">
+        מועצה מקומית חורפיש | העמותה הציבורית לקידום הספורט
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
